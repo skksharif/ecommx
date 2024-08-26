@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Simple Shopping Cart</h1>
+<div id="products">
+    <div class="item" data-id="1" data-price="10">
+        <h3>Item 1</h3>
+        <p>Price: Rs.10</p>
+        <button onclick="updateCart('Item 1', 10, 1)">+</button>
+        <button onclick="updateCart('Item 1', 10, -1)">−</button>
+        <span id="item-1-quantity">0</span>
+    </div>
+    <div class="item" data-id="2" data-price="15">
+        <h3>Item 2</h3>
+        <p>Price: Rs.15</p>
+        <button onclick="updateCart('Item 2', 15, 1)">+</button>
+        <button onclick="updateCart('Item 2', 15, -1)">−</button>
+        <span id="item-2-quantity">0</span>
+    </div>
+    <div class="item" data-id="3" data-price="20">
+        <h3>Item 3</h3>
+        <p>Price: Rs.20</p>
+        <button onclick="updateCart('Item 3', 20, 1)">+</button>
+        <button onclick="updateCart('Item 3', 20, -1)">−</button>
+        <span id="item-3-quantity">0</span>
+    </div>
+    <div class="item" data-id="4" data-price="25">
+        <h3>Item 4</h3>
+        <p>Price: Rs.25</p>
+        <button onclick="updateCart('Item 4', 25, 1)">+</button>
+        <button onclick="updateCart('Item 4', 25, -1)">−</button>
+        <span id="item-4-quantity">0</span>
+    </div>
+</div>
+
+<div id="cart" class="cart-icon" onclick="toggleCart()">
+    🛒 <span id="cart-count">0</span>
+    <div class="cart-popup" id="cart-popup">
+        <h4>Cart</h4>
+        <div id="cart-items"></div>
+        <p>GST : <span id="gst">0</span></p>
+        <p>Total: Rs.<span id="total-price">0</span></p>
+        <button onclick="buy()">Buy</button>
+    </div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
